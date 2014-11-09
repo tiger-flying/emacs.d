@@ -73,6 +73,7 @@
 (require 'init-textile)
 (require 'init-markdown)
 (require 'init-csv)
+(require 'init-c)
 (require 'init-erlang)
 (require 'init-javascript)
 (require 'init-php)
