@@ -38,6 +38,7 @@
 (require-package 'scratch)
 (require-package 'mwe-log-commands)
 
+(require 'init-unicad)
 (require 'init-frame-hooks)
 (require 'init-xterm)
 (require 'init-themes)
