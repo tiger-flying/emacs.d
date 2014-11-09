@@ -126,5 +126,8 @@
      (sql . nil)
      (sqlite . t))))
 
+;; only interpret a_{b} or a^{b}, but not a_b or a^b
+(setq org-use-sub-superscripts '{})
+(setq org-export-with-sub-superscripts '{})
 
 (provide 'init-org)
