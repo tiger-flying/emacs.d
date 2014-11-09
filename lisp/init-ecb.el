@@ -4,7 +4,7 @@
 ;;; Code
 (require-package 'ecb)
 
-(require 'ecb-autoloads)
+(require 'ecb)
 ; disable the tip-of-the-day window, it is annoying and most importantly, it will hang my emacs
 (setq ecb-tip-of-the-day nil)
 
