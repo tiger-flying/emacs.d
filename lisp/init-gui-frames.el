@@ -68,5 +68,7 @@
           (lambda ()
             (setq line-spacing 0)))
 
+;; default turn on line-wrap
+(global-visual-line-mode t)
 
 (provide 'init-gui-frames)
