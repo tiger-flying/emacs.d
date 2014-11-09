@@ -103,6 +103,7 @@
 (require 'init-dash)
 (require 'init-ledger)
 (require 'init-calendar-china)
+(require 'init-ecb)
 ;; Extra packages which don't require any configuration
 
 (require-package 'gnuplot)
