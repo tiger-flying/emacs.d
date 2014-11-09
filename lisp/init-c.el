@@ -13,12 +13,13 @@
 
 (defun my-c-setup ()
   "Setup local variables when loading a C/C++ file."
-  ; make sure flycheck-mode is enabled
+  ;; make sure flycheck-mode is enabled
   (flycheck-mode t)
   (check-and-add-header-path "include")
   (check-and-add-header-path "../include")
   (check-and-add-header-path "inc")
-  (check-and-add-header-path "../inc"))
+  (check-and-add-header-path "../inc")
+  (check-and-add-header-path "/usr/local/include/gtest"))
 
 (add-hook 'c-mode-common-hook 'my-c-setup)
 ;; detect and add header end
