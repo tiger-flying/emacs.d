@@ -11,6 +11,12 @@
 
 (add-hook 'after-init-hook 'sanityinc/maybe-use-default-font-for-symbols)
 
+;; set Chinese font, or the when showing Italic Chinese characters, only rectangle block shown
+(set-fontset-font
+ (frame-parameter nil 'font)
+ 'han
+ (font-spec :family "Hiragino Sans GB" ))
+
 
 ;;; Changing font sizes
 
