@@ -2,6 +2,34 @@
 ;;; Commentary:
 
 ;;; Code:
+
+;; treat ".h" files as C++ header files by default
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+
+;; detect C++ header files if the files name have no suffix
+;; this code snippet is copied from http://www.emacswiki.org/emacs/CPlusPlusMode
+(require 'cl)
+
+(defun file-in-directory-list-p (file dirlist)
+  "Returns true if the file specified is contained within one of
+the directories in the list. The directories must also exist."
+  (let ((dirs (mapcar 'expand-file-name dirlist))
+        (filedir (expand-file-name (file-name-directory file))))
+    (and
+     (file-directory-p filedir)
+     (member-if (lambda (x) ; Check directory prefix matches
+                  (string-match (substring x 0 (min(length filedir) (length x))) filedir))
+                dirs))))
+
+(defun buffer-standard-include-p ()
+  "Returns true if the current buffer is contained within one of
+the directories in the INCLUDE environment variable."
+  (and (getenv "INCLUDE")
+       (file-in-directory-list-p buffer-file-name (split-string (getenv "INCLUDE") path-separator))))
+
+(add-to-list 'magic-fallback-mode-alist '(buffer-standard-include-p . c++-mode))
+;; detect C++ header end
+
 ;; detect and add headers path, to make flycheck and clang-complete work
 
 (defun check-and-add-header-path (checkpath)
