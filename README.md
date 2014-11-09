@@ -1,3 +1,8 @@
+# From Rex: Why I fork Purcell's Config
+Purcell has built an excellent configuration framework, but since every Emacs user has his/her own habit and focus, Purcell's configuration is not a one for all solution for me. So I forked Purcell's config, and make some changes. The other purpose that I want to fork Purcell's config is because I want to setup my Emacs by simply cloning the config from github, no any further merge actions needed.
+
+Since C and C++ are two languages that I mainly use, my modification will focus on configuring Emacs as an C/C++ IDE.
+
 # A reasonable Emacs config
 
 This is my emacs configuration tree, continually used and tweaked
