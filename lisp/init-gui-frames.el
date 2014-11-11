@@ -71,4 +71,7 @@
 ;; default turn on line-wrap
 (global-visual-line-mode t)
 
+;; show line number by default
+(global-linum-mode 1)
+
 (provide 'init-gui-frames)
