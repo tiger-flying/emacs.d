@@ -64,6 +64,8 @@
 
 (require 'init-editing-utils)
 
+(require 'init-dtrt-indent)
+
 (require 'init-vc)
 (require 'init-darcs)
 (require 'init-git)
