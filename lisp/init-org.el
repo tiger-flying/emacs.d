@@ -13,6 +13,8 @@
 (setq org-log-done t
       org-completion-use-ido t
       org-edit-timestamp-down-means-later t
+      org-startup-indented t
+      org-hide-leading-stars t
       org-agenda-start-on-weekday nil
       org-agenda-span 14
       org-agenda-include-diary t
