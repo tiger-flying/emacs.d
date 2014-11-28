@@ -118,6 +118,7 @@
      (gnuplot . t)
      (haskell . nil)
      (latex . t)
+     (plantuml . t)
      (ledger . t)
      (ocaml . nil)
      (octave . t)
@@ -131,5 +132,20 @@
 ;; only interpret a_{b} or a^{b}, but not a_b or a^b
 (setq org-use-sub-superscripts '{})
 (setq org-export-with-sub-superscripts '{})
+
+;; to enable plantuml, we need the plantuml.jar
+(setq org-plantuml-jar-path
+      (expand-file-name "~/.emacs.d/jar/plantuml.jar"))
+
+;; we need ditaa.jar too
+(setq org-ditaa-jar-path
+      (expand-file-name "~/.emacs.d/jar/ditaa.jar"))
+
+;; don't ask for confirmation when the code block is ditaa, plantuml, etc.
+(defun my-org-confirm-babel-evaluate (lang body)
+  (not (or (string= lang "ditaa")
+           (string= lang "plantuml")
+           (string= lang "latex"))))
+(setq org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate)
 
 (provide 'init-org)

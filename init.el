@@ -108,6 +108,7 @@
 (require 'init-ledger)
 (require 'init-calendar-china)
 (require 'init-ecb)
+(require 'init-artist)
 ;; Extra packages which don't require any configuration
 
 (require-package 'gnuplot)
