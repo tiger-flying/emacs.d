@@ -109,6 +109,7 @@
 (require 'init-calendar-china)
 (require 'init-ecb)
 (require 'init-artist)
+(require 'init-plantuml)
 ;; Extra packages which don't require any configuration
 
 (require-package 'gnuplot)

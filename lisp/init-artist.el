@@ -1,7 +1,7 @@
 ;;; init-artist --- configure artist
 ;;; Commentary:
 
-;;; Code
+;;; Code:
 ;; figlet is needed to insert text in artist mode
 (require-package 'figlet)
 
