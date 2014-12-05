@@ -3,7 +3,7 @@
 
 ;;; Code:
 (unless (require 'dtrt-indent nil 'noerror)
-  (shell-command "git clone https://github.com/jscheid/dtrt-indent.git ~/.emacs.d/site-lisp"))
+  (shell-command "git clone https://github.com/jscheid/dtrt-indent.git ~/.emacs.d/site-lisp/dtrt-indent/"))
 
 (dtrt-indent-mode 1)
 
